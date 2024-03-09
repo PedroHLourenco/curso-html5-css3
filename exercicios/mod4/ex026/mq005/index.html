@@ -7,9 +7,10 @@
     <title>Media Query</title>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/media-query.css">
 </head>
 
-<body>
+<body onresize="mudouTamanho()">
     <header>
         <h1>Meu Site</h1>
         <i id="burger" class="material-symbols-outlined" onclick="clickMenu()">menu</i>
@@ -30,28 +31,33 @@
                 labore? Voluptate cupiditate sapiente quis. Exercitationem quae ad blanditiis expedita laboriosam
                 impedit aspernatur nulla! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut tempora iste
                 harum, dolorum quis beatae debitis suscipit laboriosam sed, ipsum vel vitae consequatur, culpa officiis
-                quisquam cum inventore mollitia consectetur. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Natus libero voluptatibus totam enim fugit molestiae quis dolorem numquam quisquam, ex neque inventore,
-                id nemo earum consequatur temporibus quae. Blanditiis, aliquid?</p>
+                quisquam cum inventore mollitia consectetur.
+            </p>
 
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum quis placeat aperiam at doloremque,
                 eos assumenda beatae iste ullam ea, architecto unde quibusdam explicabo quo debitis ipsa mollitia! Quam,
                 eveniet? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat, suscipit ipsum voluptatum
                 beatae quidem ab officia adipisci! Cumque, mollitia necessitatibus. Saepe quibusdam corporis quam
-                corrupti! Magni ex iste iusto autem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
-                fugiat nobis recusandae et quas iure sequi est quam consectetur. Tempore officiis rerum provident nulla
-                similique culpa repellendus eveniet cupiditate deserunt.</p>
+                corrupti! Magni ex iste iusto autem? 
+            </p>
 
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum fugit delectus, officiis dolore
                 nostrum expedita quasi veniam minima fugiat aliquid amet nulla sint. Fugit optio fuga nesciunt amet
                 nostrum eum. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab, adipisci laboriosam? Eligendi
                 possimus qui, doloribus molestiae, maiores voluptate blanditiis, eius assumenda voluptatum consequuntur
-                enim dignissimos cumque fugit vero. Incidunt, perspiciatis? Lorem ipsum dolor, sit amet consectetur
-                adipisicing elit. Nisi inventore dolorum accusantium natus odit ex optio molestiae. In delectus quaerat
-                quo molestias. Placeat, at qui dolorem cumque ea consequuntur. Perferendis.</p>
+                enim dignissimos cumque fugit vero. Incidunt, perspiciatis? 
+            </p>
         </article>
     </main>
     <script>
+        function mudouTamanho() {
+            if (window.innerWidth >= 768) {
+                itens.style.display = 'block'
+            } else {
+                itens.style.display = 'none'
+            }
+        }
+
         function clickMenu() {
             if (itens.style.display == 'block') {
                 itens.style.display = 'none'
